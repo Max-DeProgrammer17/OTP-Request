@@ -7,3 +7,36 @@ body{
     flex-direction: column;
     gap: 30px;
 }
+
+input{
+    width: 240px;
+    height: 23px;
+    font-size: 1.6rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+input:focus{
+    outline-style: none;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-radius: 0.2rem;
+    border-color: blue;
+    letter-spacing: 20px;
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.3rem;
+}
+.bottom button{
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 0.2rem;
+  border: none;
+  color: white;
+  background-color: blueviolet;
+}
