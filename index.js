@@ -6,7 +6,8 @@ let otpval = document.querySelector(".btn-val");
 otpreq.addEventListener("click", (e)=>{
     Notification.requestPermission().then((perm) =>{
         new Notification("ChatiMax Client Support!", {
-            
+            body:"OTP CODE: ",
+            icon:"pic.jfif"
         })
     })
 })
