@@ -8,7 +8,7 @@ otpreq.addEventListener("click", (e)=>{
     xhr.onreadystatechange = function(){
         if(this.readyState == 4 & this.status == 200){
             let jsOb = JSON.parse(xhr.responseText);
-            let randNum = Math.trunc(Math.random() * jsOb.length) + 1;
+            let randNum = Math.trunc(Math.random() * jsOb.length);
               let rand = jsOb[randNum].id; 
         
    
@@ -26,3 +26,5 @@ otpreq.addEventListener("click", (e)=>{
     xhr.send();
   
 })
+
+otpval.add
