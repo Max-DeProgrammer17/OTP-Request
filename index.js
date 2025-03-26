@@ -27,4 +27,17 @@ otpreq.addEventListener("click", (e)=>{
   
 })
 
-otpval.add
+otpval.addEventListener("click", (e) => {
+    let inputval = input.value;
+    if(inputval === undefined){
+        alert("Request An OTP");
+        input.focus();
+    }
+
+    if(inputval === String(rand)){
+        alert("OTP Verified Successfully!");
+    }else{
+        alert("Incorrect OTP try again..");
+        input.focus();
+    }
+})
