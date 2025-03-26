@@ -2,6 +2,7 @@
 let input = document.querySelector("input");
 let otpreq = document.querySelector(".btn-otp");
 let otpval = document.querySelector(".btn-val");
+let rand;
 
 otpreq.addEventListener("click", (e)=>{
     let xhr = new XMLHttpRequest();
@@ -9,7 +10,7 @@ otpreq.addEventListener("click", (e)=>{
         if(this.readyState == 4 & this.status == 200){
             let jsOb = JSON.parse(xhr.responseText);
             let randNum = Math.trunc(Math.random() * jsOb.length);
-              let rand = jsOb[randNum].id; 
+              rand = jsOb[randNum].id; 
         
    
   Notification.requestPermission().then((perm) =>{
@@ -36,8 +37,10 @@ otpval.addEventListener("click", (e) => {
 
     if(inputval === String(rand)){
         alert("OTP Verified Successfully!");
+        rand = undefined;
     }else{
         alert("Incorrect OTP try again..");
         input.focus();
+        input.value = "";
     }
 })
